@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Competitor Dashboard - 7 Oct 2026</title>
+<style>
+  :root {
+    --bg: #f5f6f8; --card: #ffffff; --text: #1d2330; --muted: #5d6677; --line: #e4e7ec;
+    --accent: #2f5bea; --shadow: 0 2px 10px rgba(20,30,60,.07), 0 1px 3px rgba(20,30,60,.05);
+    --high: #d93a3a; --high-bg: #fde8e8; --med: #b86e00; --med-bg: #fff1d6; --low: #1f8a4c; --low-bg: #e1f5e9;
+    --est-bg: #eef2ff; --est: #3b4cb8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #11141a; --card: #1a1f28; --text: #e7eaf0; --muted: #9aa3b5; --line: #2a3140;
+      --accent: #7c9bff; --shadow: 0 2px 12px rgba(0,0,0,.45);
+      --high: #ff7b7b; --high-bg: #3a1c1f; --med: #f3b54a; --med-bg: #3a2c12; --low: #5fd394; --low-bg: #15321f;
+      --est-bg: #1f2547; --est: #aab6ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55; font-size: 16px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 20px 48px; }
+  header h1 { margin: 0 0 6px; font-size: 2rem; letter-spacing: -.02em; }
+  header p { margin: 0; color: var(--muted); }
+  h2 { font-size: 1.3rem; margin: 40px 0 16px; letter-spacing: -.01em; }
+  h3 { margin: 0; font-size: 1.12rem; }
+  h4 { margin: 18px 0 6px; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .panel, .card { background: var(--card); border-radius: 16px; box-shadow: var(--shadow); padding: 22px 24px; }
+  .top li { margin-bottom: 14px; }
+  .top li:last-child { margin-bottom: 0; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  li { margin-bottom: 8px; }
+  .badge { display: inline-block; font-size: .74rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; letter-spacing: .03em; white-space: nowrap; }
+  .high { color: var(--high); background: var(--high-bg); }
+  .med { color: var(--med); background: var(--med-bg); }
+  .low { color: var(--low); background: var(--low-bg); }
+  .est { color: var(--est); background: var(--est-bg); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+  .card-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .date { font-weight: 600; white-space: nowrap; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  .action { background: var(--bg); border-radius: 10px; padding: 10px 14px; margin-top: 6px; }
+  .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 16px 0 8px; }
+  .tier { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .tier .big { font-size: 1.5rem; font-weight: 700; margin: 4px 0; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .93rem; margin-top: 8px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+  .note { font-size: .88rem; color: var(--muted); margin-top: 12px; }
+  footer { margin-top: 44px; text-align: center; color: var(--muted); font-size: .9rem; }
+  @media (max-width: 560px) {
+    .wrap { padding: 22px 14px 36px; }
+    header h1 { font-size: 1.6rem; }
+    .panel, .card { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Competitor Dashboard</h1>
+  <p>Run date: 7 October 2026 &middot; Period covered: 7 September to 7 October 2026 &middot; Market focus: London</p>
+</header>
+
+<h2>What matters most</h2>
+<div class="panel top">
+  <ol>
+    <li><span class="badge high">HIGH</span> <strong>Airbnb now has its own dynamic pricing and a 15% "top-rated guest" discount.</strong> These came in the Fall Update announced 30 Sep 2026. Opt-in dynamic pricing is rolling out during October. Owners can now get basic automated pricing from Airbnb for free, which weakens one of our main selling points to owners.
+      <span class="muted">(<a href="https://bnbnews.gr/en/otas/41782/airbnb-ai-pricing-hosts/">bnbnews.gr</a>, <a href="https://techmymoney.com/2026/10/01/airbnb-travel-map-lets-friends-see-your-trips-with-new-ai-search/">TechMyMoney, 1 Oct 2026</a>)</span></li>
+    <li><span class="badge med">MEDIUM</span> <strong>Airbnb has finished moving hosts to a single host-paid fee (about 15.5%).</strong> Remaining non-EU hosts moved on 15 Sep 2026 and EEA hosts move on 13 Oct 2026. The UK switch is reported as 22 Jun 2026, though sources disagree on the date. Guests now see one all-in price, so any listing that was not repriced pays roughly 12.9% more per booking.
+      <span class="muted">(<a href="https://help.hospitable.com/en/articles/4703232-airbnb-service-fees-split-fee-vs-host-only-fee">Hospitable</a>, <a href="https://www.bnbcalc.com/blog/airbnb-business/how-to-start-airbnb/how-much-does-airbnb-take-a-guide-to-airbnb-fees-for-hosts">BNBCalc</a>)</span></li>
+    <li><span class="badge med">MEDIUM</span> <strong>Guesty's AI agents are giving London rivals the same AI tools we use.</strong> Its Agent Hub covers pricing, messaging and tasks, and its 16-18 Sep GuestyVal conference was built around rolling it out. Any London manager on Guesty can now automate messaging and turn guest messages into tasks. No new launch was confirmed inside the window.
+      <span class="muted">(<a href="https://beyondpricing.com/events/guestyval-madrid">GuestyVal Madrid</a>, <a href="https://www.travolution.com/news/guesty-launches-agent-hub-a-pms-of-coordinated-ai-agents/">Travolution</a>)</span></li>
+  </ol>
+</div>
+
+<h2>South Kensington: 2-night small apartment pricing</h2>
+<div class="panel">
+  <p><span class="badge est">ESTIMATES</span> These are desk estimates for a studio or 1-bed in South Kensington (SW7) in October 2026, which is shoulder season. We could not pull live 2-night quotes from Airbnb, Booking.com or the operator sites because the research network blocked those sites. The ranges are built from the market data and listing prices cited below. Treat them as a guide and check live rates before setting prices.</p>
+
+  <div class="price-grid">
+    <div class="tier">
+      <div class="muted">Budget (basic studio)</div>
+      <div class="big">&pound;130 &ndash; &pound;180 <span class="muted">/ night</span></div>
+      <div>2 nights + cleaning: <strong>~&pound;320 &ndash; &pound;460</strong></div>
+    </div>
+    <div class="tier">
+      <div class="muted">Mid (well-reviewed studio / 1-bed)</div>
+      <div class="big">&pound;190 &ndash; &pound;280 <span class="muted">/ night</span></div>
+      <div>2 nights + cleaning: <strong>~&pound;450 &ndash; &pound;660</strong></div>
+    </div>
+    <div class="tier">
+      <div class="muted">Premium (designer 1-bed, managed)</div>
+      <div class="big">&pound;300 &ndash; &pound;450 <span class="muted">/ night</span></div>
+      <div>2 nights + cleaning: <strong>~&pound;690 &ndash; &pound;1,020</strong></div>
+    </div>
+  </div>
+
+  <h4>How the 2-night total is built (estimate)</h4>
+  <ul>
+    <li><strong>Cleaning fee:</strong> about &pound;60&ndash;&pound;120 per stay. A typical London 1-bed cleaning fee is about &pound;85, based on May 2026 market data; the UK average is &pound;40&ndash;&pound;70. On a 2-night stay, cleaning adds about 15&ndash;20% to the total. (<a href="https://www.guestready.com/blog/airbnb-cleaning-fee/">GuestReady 2026 guide</a>, <a href="https://www.hostfully.com/blog/airbnb-cleaning-fee/">Hostfully, 5 Aug 2026</a>)</li>
+    <li><strong>Service fees:</strong> Airbnb UK guests no longer see a separate service fee, because hosts now pay a single ~15.5% fee that is built into the price. Booking.com does not normally add a guest fee either. London has no tourist tax. In practice, the total is about 2 &times; the nightly rate plus cleaning. (<a href="https://www.bnbcalc.com/blog/airbnb-business/how-to-start-airbnb/how-much-does-airbnb-take-a-guide-to-airbnb-fees-for-hosts">BNBCalc</a>)</li>
+    <li><strong>Data points used:</strong>
+      <ul>
+        <li>The area's average nightly rate was about &pound;279 in Sep 2026, up 6% on the year. This is for BNBCalc's "Paddington &ndash; Kensington" area, which is the closest available match. (<a href="https://www.bnbcalc.com/markets/gb/paddington-kensington">BNBCalc</a>)</li>
+        <li>Kensington &amp; Chelsea borough: average nightly rate &pound;219 at 75% occupancy, with 1-beds at about $231. This is older data (Aug 2023 to Jul 2024). (<a href="https://airbtics.com/annual-airbnb-revenue-in-kensington-and-chelsea-uk">Airbtics</a>)</li>
+        <li>A listing called "South Kensington Studio" started at &pound;130.90 a night before taxes and fees (price checked 25 Feb 2026 for a March stay). (<a href="https://www.travelocity.com/es/London-Hoteles-South-Kensington-Studio.h107885756.Informacion-Hotel">Travelocity</a>)</li>
+        <li>Another South Kensington studio is listed at &pound;279 a night (&pound;1,764 a week). (<a href="https://www.nyhabitat.com/london-apartment/vacation/1556">NY Habitat</a>)</li>
+        <li>Mid-term 1-bed short lets in SW7 run about &pound;1,200&ndash;&pound;2,850 a week, roughly &pound;170&ndash;&pound;410 a night. These usually have long minimum stays. (<a href="https://www.foxtons.co.uk/short-let-properties/south-kensington-sw7">Foxtons SW7</a>)</li>
+        <li>Pass the Keys runs SW7 studios near Gloucester Road and the V&amp;A, and UnderTheDoormat runs 1-beds near South Kensington. Neither showed a price in our sources. (<a href="https://www.expedia.com/London-Hotels-Pass-The-Keys-Gorgeous-Studio-With-Access-To-A-Private-Garden.h100530955.Hotel-Information">Expedia: Pass the Keys</a>, <a href="https://www.expedia.com/Hotel.h68602219.Hotel-Information">Expedia: UnderTheDoormat</a>)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>Weekday vs weekend (estimate)</h4>
+  <p>We found no weekday/weekend split specific to SW7. South Kensington demand is mostly leisure (museums, Royal Albert Hall, Imperial College visitors), so we estimate <strong>Friday and Saturday nights run about 10&ndash;20% above Sunday to Thursday</strong>. That would make a Fri&ndash;Sat 2-night stay about &pound;40&ndash;&pound;110 more than a midweek stay. Business areas work the other way: the City of London is reported to run weekdays 20&ndash;30% higher. (<a href="https://strspecialist.com/set-the-perfect-price-for-your-airbnb-in-city-of-london">STR Specialist, 2026</a>)</p>
+
+  <h4>Nearby areas</h4>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Area</th><th>Typical nightly rate</th><th>Vs South Kensington</th><th>Source / status</th></tr>
+    <tr><td>South Kensington (SW7)</td><td>&pound;190&ndash;&pound;280 for a mid studio/1-bed</td><td>Baseline</td><td>Estimate from the data above</td></tr>
+    <tr><td>Kensington (W8 / Paddington&ndash;Kensington)</td><td>~&pound;279 average across all listing sizes, Sep 2026</td><td>Similar to slightly higher</td><td><a href="https://www.bnbcalc.com/markets/gb/paddington-kensington">BNBCalc</a></td></tr>
+    <tr><td>Chelsea (K&amp;C borough)</td><td>~&pound;219 average; entire homes ~&pound;183 in Feb to ~&pound;230 in Aug</td><td>Similar. Premium Chelsea 1-beds are probably at the top of the SW7 range (Unconfirmed)</td><td><a href="https://airbtics.com/annual-airbnb-revenue-in-kensington-and-chelsea-uk">Airbtics</a> (2023&ndash;24 data), <a href="https://shorttermrentalz.com/news/city-relay-reveals-top-london-boroughs-for-summer-rental-income/">ShortTermRentalz</a> (older data)</td></tr>
+    <tr><td>Earl's Court (SW5)</td><td>No area average found. Airbnb serviced apartments start from ~$110</td><td>Estimated 10&ndash;20% cheaper (Unconfirmed)</td><td><a href="https://airbnb.com/earls-court-united-kingdom/stays/serviced-apartments">Airbnb Earl's Court</a></td></tr>
+    <tr><td>London overall</td><td>~&pound;191 average over the last 12 months</td><td>SW7 is about 15&ndash;45% higher</td><td><a href="https://airbtics.com/average-rent-london-gb">Airbtics London</a></td></tr>
+  </table>
+  </div>
+  <p class="note"><strong>Bottom line (estimate):</strong> 2 nights in a small South Kensington apartment cost about <strong>&pound;320&ndash;&pound;1,020 all-in</strong>. Most well-reviewed studios and 1-beds land at <strong>&pound;450&ndash;&pound;660</strong>, including about &pound;85 cleaning. Before we use this for pricing, take a live sample of 20 or more SW7 listings for one midweek and one weekend date.</p>
+</div>
+
+<h2>Competitors</h2>
+<div class="grid">
+
+  <div class="card">
+    <div class="card-head"><h3>Airbnb (incl. Co-Host Network)</h3><span class="badge high">HIGH</span></div>
+    <h4>Recent moves</h4>
+    <ul>
+      <li><span class="date">30 Sep 2026</span>: The Fall Update adds host dynamic pricing (opt-in, rolling out in October), a 15% top-rated guest discount, an AI earnings dashboard for hosts with 5 or fewer listings, and a calendar covering multiple listings for hosts with 6 or more. AI search launches in the US first. <a href="https://bnbnews.gr/en/otas/41782/airbnb-ai-pricing-hosts/">bnbnews.gr</a> &middot; <a href="https://techmymoney.com/2026/10/01/airbnb-travel-map-lets-friends-see-your-trips-with-new-ai-search/">TechMyMoney</a></li>
+      <li><span class="date">15 Sep 2026</span>: Remaining non-EU hosts moved to the single ~15.5% host-paid fee. EEA hosts follow on 13 Oct. The UK switch is reported as 22 Jun 2026, but sources conflict on the date. <a href="https://help.hospitable.com/en/articles/4703232-airbnb-service-fees-split-fee-vs-host-only-fee">Hospitable</a> &middot; <a href="https://www.bnbcalc.com/blog/airbnb-business/how-to-start-airbnb/how-much-does-airbnb-take-a-guide-to-airbnb-fees-for-hosts">BNBCalc</a></li>
+      <li><span class="date">Ongoing</span>: The London Co-Host Network keeps marketing local co-hosts to owners for pricing, messaging, cleaning and maintenance. No change was dated inside the window. <a href="https://www.airbnb.com/host/london-united-kingdom/co-hosts">Airbnb London Co-Host Network</a></li>
+    </ul>
+    <h4>What it means for us</h4>
+    <p>Free pricing tools from Airbnb plus local co-hosts make it easier for owners to manage without us. The 15% guest discount could also pull high-quality guests toward hosts who opt in.</p>
+    <h4>Suggested action</h4>
+    <p class="action">Compare our AI pricing with Airbnb's new dynamic pricing on 10 of our London listings over 30 days. Turn the revenue gap into a one-page owner pitch.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h3>Guesty</h3><span class="badge med">MEDIUM</span></div>
+    <h4>Recent moves</h4>
+    <ul>
+      <li><span class="date">16&ndash;18 Sep 2026</span>: The GuestyVal conference in Madrid, with 500+ property managers, focused on AI-driven automation. Guesty also appeared at SCALE Middle East on 30 Sep&ndash;1 Oct. <a href="https://beyondpricing.com/events/guestyval-madrid">GuestyVal Madrid</a> &middot; <a href="https://www.guesty.com/event-lp/scale-middle-east/">Guesty</a></li>
+      <li><span class="date">Jun 2026 (context, outside window)</span>: Agent Hub launched, with coordinated AI agents for pricing, messaging, operations, finance and reviews. <a href="https://www.travolution.com/news/guesty-launches-agent-hub-a-pms-of-coordinated-ai-agents/">Travolution</a></li>
+      <li><span class="date">22 Apr 2026 (context, outside window)</span>: ReplyAI Autopilot and AI Task Creation launched, turning guest messages into cleaning and maintenance tasks automatically. <a href="https://www.mannpublications.com/mannreport/2026/04/22/guesty-launches-replyai-autopilot-and-ai-task-creation/">Mann Report</a></li>
+    </ul>
+    <h4>What it means for us</h4>
+    <p>London managers on Guesty, including rivals like Houst and Pass the Keys if they use it, can now match our automated messaging and cleaning dispatch. Our edge has to come from accurate scheduling and how well we execute, not from simply having AI.</p>
+    <h4>Suggested action</h4>
+    <p class="action">Have ops set a target for time from a guest's issue message to an assigned cleaning or maintenance task, track it weekly, and publish it to owners.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h3>Sonder</h3><span class="badge low">LOW</span></div>
+    <h4>Recent moves</h4>
+    <ul>
+      <li><strong>No significant moves</strong> in the last 30 days. Sonder stopped operating in Nov 2025 after Marriott ended their deal, then went through Chapter 7 and UK insolvency. <a href="https://www.businesstravelnewseurope.com/Accommodation/Sonder-announces-plan-to-wind-down-operations-and-liquidate">BTN Europe</a></li>
+      <li><span class="date">27 Jul 2026 (context)</span>: TravelAI bought the Sonder brand only, with no properties, leases or staff, and relaunched Sonder.com as a curated stays guide that includes London. <a href="https://www.hotelmanagement.net/transactions/travelai-acquires-sonder-brand-relaunches-curated-guide">Hotel Management</a></li>
+    </ul>
+    <h4>What it means for us</h4>
+    <p>Sonder is no longer an operator, but the new Sonder.com could become another place to list our London units.</p>
+    <h4>Suggested action</h4>
+    <p class="action">Ask TravelAI what it would take to get our best-reviewed London units into the Sonder.com London guide.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h3>Vacasa</h3><span class="badge low">LOW</span></div>
+    <h4>Recent moves</h4>
+    <ul>
+      <li><span class="date">20 Aug 2026, finished in Sep</span>: Casago completed the sale of all former Vacasa markets to local franchise owners, keeping only ~600 of ~32,000 units. Franchisees rehired about 89% of field staff. <a href="https://www.rutlandherald.com/news/business/casago-completes-local-franchise-sales-of-former-vacasa-markets/article_9b5eb86a-b733-55f8-8deb-f6043b99f937.html">Business Wire via Rutland Herald</a> &middot; <a href="https://shorttermrentalz.com/news/casago-completes-sales-of-former-vacasa-markets/">ShortTermRentalz</a></li>
+      <li>Vacasa no longer publishes a management rate; each franchisee sets its own terms. <a href="https://pm.redawning.com/pm/post/vacasa-property-management-review-2026">RedAwning review</a></li>
+    </ul>
+    <h4>What it means for us</h4>
+    <p>Vacasa is now a franchise booking brand that operates in North America only. It poses no direct threat to our London owners or guests.</p>
+    <h4>Suggested action</h4>
+    <p class="action">No spend. Check again next quarter in case Casago announces UK or European franchising.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h3>Evolve</h3><span class="badge low">LOW</span></div>
+    <h4>Recent moves</h4>
+    <ul>
+      <li><strong>No significant moves</strong> found in the last 30 days.</li>
+      <li><span class="date">2026 (context, exact date unconfirmed)</span>: Evolve's fees are now tiered: Core 10%, Plus 15% and custom Pro, plus a $250 onboarding fee. Cleaning stays the owner's job. <a href="https://redawning.com/pm/post/evolve-property-management-review-2026">RedAwning review</a></li>
+    </ul>
+    <h4>What it means for us</h4>
+    <p>Evolve operates in the US only. Its 10&ndash;15% remote-only model does show that owners will pay less for less service, which is a pricing pattern London rivals could copy.</p>
+    <h4>Suggested action</h4>
+    <p class="action">Have the team cost a lighter "pricing + messaging only" tier at about 10&ndash;12% for London owners, as a defence against cheap remote models.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h3>London local rivals &amp; market</h3><span class="badge low">LOW</span></div>
+    <h4>Recent moves</h4>
+    <ul>
+      <li><strong>Houst, UnderTheDoormat, Pass the Keys: No significant moves</strong> found in the window. Houst still advertises commission "from 12%". <a href="https://www.houst.com/airbnb-cohost/london">Houst</a></li>
+      <li><span class="date">Mid-2026 status</span>: The national short-term let registration scheme, first targeted for April 2026, has not gone live, and we found no launch date. The 90-night cap for London is unchanged. <a href="https://www.withersworldwide.com/en-gb/insight/read/short‑term-lettings-across-major-cities-evolving-regulation-and-ongoing-demand">Withers</a> &middot; <a href="https://www.passthekeys.com/en/blog/london-short-term-lets-in-2026-what-property-owners-need-to-know">Pass the Keys</a></li>
+      <li><span class="date">Apr 2026 (context)</span>: Westminster is investigating 2,700+ properties for unlawful short-term letting. <a href="https://www.propertyreporter.co.uk/over-2700-westminster-properties-under-investigation-for-unlawful-short-term-letting.html">Property Reporter</a></li>
+    </ul>
+    <h4>What it means for us</h4>
+    <p>Registration and enforcement are coming. Accurate stay schedules, including night-count tracking against the 90-night cap, will become a compliance selling point for owners.</p>
+    <h4>Suggested action</h4>
+    <p class="action">Add a 90-night counter for each owner to our monthly owner report before registration goes live.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>Prepared by Competitor Scout. Suggestions only; nothing was sent.</p>
+  <p class="muted">Sources were checked 7 Oct 2026. Many source pages could not be opened directly from the research network, so some figures come from search-result summaries. Items marked "Unconfirmed" or "estimate" should be checked before acting.</p>
+</footer>
+
+</div>
+</body>
+</html>

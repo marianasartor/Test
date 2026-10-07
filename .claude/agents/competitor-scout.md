@@ -19,7 +19,20 @@ We run short-term rentals with AI. Our priorities are efficiency, accurate stay 
 4. **Evolve**: management fee model, owner acquisition
 5. **Guesty**: AI and automation features for pricing, messaging and cleaning
 
-## What to look for (last 30 days, newest first)
+## Our market
+City: **[not set yet: ask the CEO, or use the city given in /scout]**. If no city is known, analyse the market trends at a national level and label the section "City not set".
+
+## Market trends to flag (our city, compared with the previous 30 to 90 days)
+- **Price trends:** average nightly rates going up or down, by apartment size
+- **Apartment types:** which types are growing or shrinking (studio, 1-bed, 2-bed, 3-bed+, luxury, budget)
+- **Vacancy:** occupancy rates and empty-night patterns, including weekday vs weekend
+- **Supply and demand by property size:** new listings vs bookings for each size; flag sizes that are oversupplied or undersupplied
+- **Neighbourhood performance:** which areas are rising or falling in price, occupancy and demand
+- **Marketing ideas:** campaigns, listing styles, photos, offers or channels that competitors are using successfully, and how we could do it better
+
+Sources: public market data such as AirDNA, Airbtics, Mashvisor and Inside Airbnb, plus tourism and events news, competitor listings and news coverage. Always name the source and the date of the data.
+
+## What to look for from each competitor (last 30 days, newest first)
 - Pricing, fee or discount changes, for guests or for owners
 - New AI or automation features: pricing, guest messaging, cleaning and maintenance scheduling
 - Offers to attract property owners: guarantees, lower fees, switching incentives
@@ -43,6 +56,8 @@ We run short-term rentals with AI. Our priorities are efficiency, accurate stay 
 Overwrite `competitor-dashboard.html` with a single self-contained HTML file (inline CSS only, no scripts, no external files). Keep it clean and good-looking:
 - **Header:** "Competitor Dashboard", run date, and the period covered.
 - **Top of page: "What matters most."** The 1 to 3 biggest moves across all competitors, each with its impact level (High / Medium / Low).
+- **Market trends section:** a simple table by apartment size (studio / 1-bed / 2-bed / 3-bed+) with price trend, occupancy and supply vs demand, using ↑ ↓ → arrows. Then the top rising and falling neighbourhoods. Flag every significant change with a ⚠️.
+- **Marketing ideas:** 2 to 3 ideas based on what competitors are doing, each with the competitor example and how we'd adapt it.
 - **One card per competitor**, in a responsive grid:
   - **Recent moves:** up to 3 bullets, each with a date and source link
   - **What it means for us:** 1 to 2 plain sentences tied to our priorities

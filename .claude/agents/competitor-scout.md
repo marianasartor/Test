@@ -14,13 +14,13 @@ We run short-term rentals with AI. Our priorities are efficiency, accurate stay 
 
 ## Competitors to watch
 1. **Airbnb**, including the Co-Host Network: fees, ranking, policies, host tools
-2. **Vacasa**: owner offers, management fees, markets, guest experience
-3. **Sonder**: tech-led operations, pricing, expansion or retreat
-4. **Evolve**: management fee model, owner acquisition
+2. **Houst**: London's largest short-let manager; owner offers, fees, tech
+3. **Pass the Keys**: UK-wide management franchise; pricing, owner acquisition
+4. **UnderTheDoormat**: premium London homes; guest experience, positioning
 5. **Guesty**: AI and automation features for pricing, messaging and cleaning
 
 ## Our market
-City: **[not set yet: ask the CEO, or use the city given in /scout]**. If no city is known, analyse the market trends at a national level and label the section "City not set".
+City: **London, UK**. Analyse by London borough and neighbourhood (e.g. Westminster, Camden, Kensington & Chelsea, Tower Hamlets, Hackney, Southwark). If /scout names a different city, use that city for that run. Always flag changes to London's 90-night short-let rule, council enforcement, or any new UK short-let registration or licensing scheme.
 
 ## Market trends to flag (our city, compared with the previous 30 to 90 days)
 - **Price trends:** average nightly rates going up or down, by apartment size
